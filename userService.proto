@@ -9,7 +9,10 @@ option csharp_namespace = "UserService";
 package userService;
 
 service UserService {
+    // 登录
     rpc Login(LoginRequest) returns (LoginResponse) {}
+    // 注册
+    rpc Register(RegisterRequest) returns (RegisterResponse) {}
 }
 
 message LoginRequest {
@@ -18,12 +21,21 @@ message LoginRequest {
 }
 
 message LoginResponse {
-    bool userRegistered = 1;
-    user resp = 2;
+    bool success = 1;
+    string message = 2;
+    bool userRegistered = 3;
+    string userSerialized = 4;
 }
 
-message user {
-    int32 level = 1;
+message RegisterRequest {
+    string userName = 1;
+    string passWord = 2;
+    string nickName = 3;
+}
+
+message RegisterResponse {
+    bool success = 1;
+    string message = 2;
 }
 
 
