@@ -6,7 +6,7 @@ option java_package = "org.tongji.programming.forum.proto";
 option java_outer_classname = "UserService";
 option csharp_namespace = "UserService";
 
-package userService;
+package user_service;
 
 service UserService {
     // 登录
