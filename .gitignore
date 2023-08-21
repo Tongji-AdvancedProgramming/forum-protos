@@ -1,0 +1,7 @@
+# Ignore all but...
+
+*
+
+!README.md
+!*.proto
+!.gitignore
